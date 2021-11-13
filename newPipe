@@ -1,0 +1,10 @@
+rm output.txt
+echo removed output
+touch output.txt
+echo created output
+g++ -o newGenerator passwordGenerator.cpp
+echo complied
+./newGenerator 2Liam@
+echo completed
+cat output.txt | ssmtp 9702195822@vtext.com
+echo sent the text

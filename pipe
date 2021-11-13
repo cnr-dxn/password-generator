@@ -1,0 +1,8 @@
+rm output
+echo removed the output
+g++ -o interface enterPassword.cpp
+echo compiled enter
+g++ -o generate passwordGenerator.cpp
+echo compiled generate
+./generate | ./interface @bella12 | tee -a output | 'egrep' -e 'guesses'
+cat output | ssmtp 9702195822@vtext.com
